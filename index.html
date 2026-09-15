@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julien Arsena — Portfolio & Travaux</title>
+  <meta name="description" content="Portfolio personnel : science des données, humanités numériques et projets web." />
+
+  <!-- Typographie épurée -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --text: #1a1a1a;
+      --muted: #666666;
+      --border: #e5e3dd;
+      --accent: #2d5a88;
+      --card-bg: #ffffff;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Newsreader', Georgia, serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121314;
+        --text: #eaeaea;
+        --muted: #8e8e93;
+        --border: #2c2d30;
+        --accent: #6ba6e8;
+        --card-bg: #1a1b1e;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 15px;
+      padding: 4rem 1.5rem;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 3.5rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+    }
+
+    .bio {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-top: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .bio em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+    }
+
+    .links {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 1.2rem;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    /* Projets */
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.4rem;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--muted);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      color: var(--muted);
+      background: var(--bg);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .project-desc {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Julien Arsena</h1>
+      <p class="bio">
+        Sciences des données, modélisation statistique & humanités numériques.
+        Intéressé par les croisements entre culture, linguistique et représentations quantitatives.
+      </p>
+      <div class="links">
+        <a href="https://github.com/votre-pseudo" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:votre.email@exemple.com">Contact</a>
+        <a href="#projets">Projets</a>
+      </div>
+    </header>
+
+    <section id="projets">
+      <h2>Sélection de travaux</h2>
+      <div class="project-list">
+
+        <!-- Projet 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <a href="#" class="project-title">CineChroma ↗</a>
+            <span class="project-tag">Web App & Data</span>
+          </div>
+          <p class="project-desc">
+            Exploration chromatique et géographique du cinéma mondial via extraction d'analyses colorimétriques et requêtes API TMDB.
+          </p>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <a href="#" class="project-title">Visualisation de fractales & Paradoxe du littoral ↗</a>
+            <span class="project-tag">Math & Canvas</span>
+          </div>
+          <p class="project-desc">
+            Démonstrateur interactif modélisant les courbes de Koch et illustrant l'estimation de dimensions fractales appliquées à la géographie.
+          </p>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <a href="#" class="project-title">Acoustique & Température ↗</a>
+            <span class="project-tag">Phonétique & OLS</span>
+          </div>
+          <p class="project-desc">
+            Extraction de formants acoustiques (Praat/Parselmouth) et modélisation de corrélations climatiques globales à partir de données NASA POWER.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Julien Arsena</span>
+      <span>Hébergé sur Vercel</span>
+    </footer>
+  </div>
+
+</body>
+</html>
